@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>RPG dice roller demo</title>
+
+	<!-- If jQuery is found, the script uses a different logic for running init(), jQuery should be better at doing it right than I am.. -->
+	<!--
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
+	-->
+	
+	<script type="text/javascript" src="rpgdice.js"></script>
+	
+	<!-- I'm no graphics designer, but at least I tried... -->
+	<style type="text/css">
+		* {
+			font-family: Verdana, monospace;
+			color: #999;
+			font-size: 12px;
+		}
+		
+		body {
+			background-color: #000;
+		}
+		
+		h1 {
+			font-size: 18px;
+		}
+		h2 {
+			font-size: 14px;
+		}
+		h3 {
+			font-size: 13px;
+		}
+		
+		#RpgDiceRoller {
+			margin: 40px;
+			padding: 25px;
+			border: 1px solid #666;
+			background: #222;
+			width: 400px;
+		}
+		
+		#RpgDiceRoller .source {
+			border: 1px solid #666;
+			background: #232;
+			padding: 10px;
+			width: 300px;
+		}
+		
+		#RpgDiceRoller .trigger {
+			margin-left: 65px;
+			padding: 10px;
+			border: 1px solid #666;
+			background: #322;
+			display: block;
+			width: 200px;
+		}
+		
+		#RpgDiceRoller .target {
+			min-height: 100px;
+			border: 1px solid #666;
+			background: #223;
+			padding: 10px;
+			width: 300px;
+		}
+	</style>
+</head> 
+<body>
+	<div id="RpgDiceRoller">
+		<h1>RPG dice roller</h1>
+		<h2>Step 1: Choose your weapon.</h2>
+		<input type="text" class="source" value="3d10+2" /><br />
+		<h2>Step 2: Attack!</h2>
+		<input type="button" class="trigger" value="To the death! (Throw dice)" /><br />
+		<h2>Step 3: Wait for results</h2>
+		<div class="target"></div>
+		<h2>Step 4: Download &amp; Distribute</h2>
+		<div class="distribute">
+			<ul>
+				<li><a href="rpgdice.js">JavaScript source code</a></li>
+				<li><a href="rpgdice.html">This file</a></li>
+			</ul>
+			<h3>License</h3>
+			<p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License. This allows you to share and modify the work, including for commercial uses, as long as:</p>
+			<ul>
+				<li>You credit me on the original code</li>
+				<li>Any altered code will be released under the exact same license</li>
+			</ul>
+			<p>
+				The code requires no JavaScript libraries of any kind, e.g. jQuery, so it should also work fine with any JavaScript libraries you might be using. It should be able to handle most error cases, and does quite aggressive logging to help in debugging when issues arise.<br />
+				<br />
+				Tested on all modern browsers (Internet Explorer 9, Firefox 5, Google Chrome 12, Safari 5, Opera 11.5).<br />
+				<br />
+				If this does not work on some browser, fix it and release the fix, or give me the fix and I'll release it.<br />
+			</p>
+		</div>
+	</div>
+</body> 
+</html> 
